@@ -1,0 +1,29 @@
+name: glim
+version: 1.0.0
+synopsis: Graph anything expontentially
+description: Graph anything expontentially
+maintainer: Brett Weaver
+license: MIT
+github: TBD
+category: Development
+extra-source-files:
+  - CHANGELOG.md
+
+ghc-options: ""
+
+dependencies:
+  - base >= 4.9 && < 5
+  - split
+  - text
+
+executable:
+  main: Main.hs
+
+tests:
+  spec:
+    cpp-options: -DTEST
+    main: Test.hs
+    source-dirs:
+      - .
+    dependencies:
+      - HUnit
